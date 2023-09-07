@@ -7,9 +7,9 @@
 |3|분류|테스트2|---|
 |4|분류|테스트2|---|
 |5|분류|테스트2|---|
-|6|PROGRAMMERS|스택/큐|[주식가격](https://school.programmers.co.kr/learn/courses/30/lessons/42584)|
-|7|PROGRAMMERS|스택/큐|[다리를 지나는 트럭](https://school.programmers.co.kr/learn/courses/30/lessons/42583)|
-|8|PROGRAMMERS|스택/큐|[프로세스](https://school.programmers.co.kr/learn/courses/30/lessons/42587)|
-|9|PROGRAMMERS|해시|[전화번호 목록](https://school.programmers.co.kr/learn/courses/30/lessons/42577)|
-|10|PROGRAMMERS|힙|[더 맵게](https://school.programmers.co.kr/learn/courses/30/lessons/42626)|
+|6|PROGRAMMERS||[]()|
+|7|PROGRAMMERS||[]()|
+|8|PROGRAMMERS|DP|[정수 삼각형](https://school.programmers.co.kr/learn/courses/30/lessons/43105)|
+|9|PROGRAMMERS|DP|[피보나치 수](https://school.programmers.co.kr/learn/courses/30/lessons/12945)|
+|10|PROGRAMMERS|DP|[등굣길](https://school.programmers.co.kr/learn/courses/30/lessons/42898)|
 
