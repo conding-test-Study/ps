@@ -1,5 +1,8 @@
 # ps study
-
+문제 참고
+- https://github.com/tony9402/baekjoon
+- https://github.com/encrypted-def/basic-algo-lecture/blob/master/workbook.md
+  
 ---
 ### 📌 진행 방식
 **월~금**
