@@ -37,33 +37,27 @@ while start < len(s):
 print(maxMK)
 print(minMK)
 
-# https://yuna0125.tistory.com/44 답지확인
-
+#  답지확인
 import sys
-input = sys.stdin.readline
-
-s = input().rstrip() # rstrip 없으면 for문 한 번 더 돌아서 틀린 답이 나옴.
-
+ 
+w = sys.stdin.readline().strip()
+Max = Min = ""
 m = 0
-max = ''
-min = ''
-
-for i in s:
-    if i == 'M':
+for i in range(len(w)):
+    if w[i] == "M":
         m += 1
-    else: # i가 k일 경우
-        if m>0:
-            max += str(5*(10**m))
-            min += str(10**m + 5)
+    elif w[i] == "K":
+        if m:
+            Min += str(10 ** m + 5)
+            Max += str(5 * (10 ** m ))
         else:
-            max += '5'
-            min += '5'
+            Min += "5"
+            Max += "5"
         m = 0
-
-# 'M'으로 끝날 경우
-if m>0:
-    max += '1' * m
-    min +=  str(10**(m-1))
-
-print(max)
-print(min)
+if m:
+    Min += str(10 ** (m - 1))
+    while m:
+        Max += "1"
+        m -= 1
+print(Max)
+print(Min)
