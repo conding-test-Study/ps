@@ -35,3 +35,32 @@ if len(D) != 0:
 
 print(max_n)
 print(min_n)
+
+
+# 정답 코드 추가
+letters = input().rstrip()
+
+d = 0
+max_n = ''
+min_n = ''
+
+
+for l in letters:
+    if l == 'M':
+        d += 1
+    else:
+        if d > 0:
+            max_n += str((10 ** d) * 5)
+            min_n += str((10 ** d) + 5)
+
+        else:
+            max_n += '5'
+            min_n += '5'
+        d = 0
+
+if d > 0:
+    min_n += str(10 ** (d - 1))
+    max_n += '1'*d  # d-1 이 아닌 d가 필요했음. '501' 같은 1을 넣기 위함.
+
+print(max_n)
+print(min_n)
