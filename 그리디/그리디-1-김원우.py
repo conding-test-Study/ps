@@ -20,6 +20,5 @@ for time in room:
     if new_start >= prev_end: # 새로 꺼낸 회의실 시작 시간이 이전 회의의 끝나는 시간보다 크거나 같으면
         cnt += 1
         prev_end = new_end
-
 print(cnt)
 
