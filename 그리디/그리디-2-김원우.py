@@ -6,7 +6,7 @@ num.pop() #개행 제거
 max_ans = []
 min_ans = []
 
-cntM = 0 # M 갯수 세는 용도
+cntM = 0 #M 갯수 세는 용도
 
 for s in num:
     if s == "K":
