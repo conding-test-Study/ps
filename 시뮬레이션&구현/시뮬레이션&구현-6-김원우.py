@@ -1,4 +1,4 @@
-# bfs의 기본개념을 알면 별로 어렵지 않게 풀 수 있는 문제였음
+# bfs의 기본개념을 알면 별로 어렵지 않게 풀 수 있는 문제였음.
 from collections import deque
 
 def solution(maps):
