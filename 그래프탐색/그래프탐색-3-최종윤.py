@@ -1,3 +1,6 @@
+#답지 확인
+# 반복문 cnt 2개이상일때 그만두게하는거 break생각 못함 
+
 import sys
 input = sys.stdin.readline
 
