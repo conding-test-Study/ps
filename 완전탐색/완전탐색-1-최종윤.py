@@ -1,46 +1,8 @@
+#답지 확인
 #문제 그리디 가능한지 예시 확인 안 해보고 그리디로 구현하기 시작했음
 #그리디X - 35-1개,40-1개 보다 40-2개가 최소값이기 때문
 #완전탐색을하는데 비트마스크 또는 DFS 백트래킹으로 풀 수 있다.
 
-import sys
-
-
-in_str = input()
-bcnt = int(input())
-price = []
-in_major = []
-for i in range(bcnt):
-    p, m = input().split()
-    price.append(int(p))
-    in_major.append(m)
-def wordinbook(word, book, price):
-    cnt = 0
-    for w in word:
-        if w in book:
-            cnt += 1
-            book = book.replace(w, ' ', 1) # 오려낸 글자는 없애준다
-            # print(book, word)
-            if cnt == len(word):
-                return price
-    return sys.maxsize
-
-result = []
-
-for i in range(1 << len(in_major)):
-    search_str = ""
-    sum_price = 0
-    for j in range(len(in_major)):
-        if (i & 1 << j) != 0: # 
-            search_str += in_major[j]
-            sum_price += price[j]
-
-    result.append(wordinbook(in_str, search_str, sum_price))
-
-result = min(result)
-if result == sys.maxsize:
-    result = -1
-
-print(result)
 
 # dfs로 구현
 
@@ -93,4 +55,48 @@ if min_val == sys.maxsize:
     print(-1)
 else:
     print(min_val)
+
+
+
+###############################################################
+#비트마스킹
+import sys
+
+
+in_str = input()
+bcnt = int(input())
+price = []
+in_major = []
+for i in range(bcnt):
+    p, m = input().split()
+    price.append(int(p))
+    in_major.append(m)
+def wordinbook(word, book, price):
+    cnt = 0
+    for w in word:
+        if w in book:
+            cnt += 1
+            book = book.replace(w, ' ', 1) # 오려낸 글자는 없애준다
+            # print(book, word)
+            if cnt == len(word):
+                return price
+    return sys.maxsize
+
+result = []
+
+for i in range(1 << len(in_major)):
+    search_str = ""
+    sum_price = 0
+    for j in range(len(in_major)):
+        if (i & 1 << j) != 0: # 
+            search_str += in_major[j]
+            sum_price += price[j]
+
+    result.append(wordinbook(in_str, search_str, sum_price))
+
+result = min(result)
+if result == sys.maxsize:
+    result = -1
+
+print(result)
 
