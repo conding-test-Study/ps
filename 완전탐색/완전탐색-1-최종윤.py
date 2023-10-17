@@ -13,10 +13,6 @@ for i in range(bcnt):
     p, m = input().split()
     price.append(int(p))
     in_major.append(m)
-
-
-
-
 def wordinbook(word, book, price):
     cnt = 0
     for w in word:
@@ -45,3 +41,56 @@ if result == sys.maxsize:
     result = -1
 
 print(result)
+
+# dfs로 구현
+
+
+import sys
+from collections import defaultdict
+
+count  = defaultdict(int)
+select_cnt = defaultdict(int)
+
+
+T = input()
+len = len(T)
+for c in T:
+    count[c] += 1
+
+n = int(input())
+
+books = []
+for i in range(n):
+    books.append(list(input().split()))
+
+min_val = sys.maxsize
+
+def check():
+    for key in count:
+        if count[key] > select_cnt[key]:
+            return False
+    return True
+
+
+def dfs(idx, total):
+    global min_val
+    if idx == n:
+        if check():
+            min_val = min(min_val, total)
+        return
+
+    for c in books[idx][1]:
+        select_cnt[c] += 1
+    dfs(idx + 1, total + int(books[idx][0]))
+    for c in books[idx][1]:
+        select_cnt[c] -= 1
+    dfs(idx + 1, total)
+
+
+
+dfs(0,0)
+if min_val == sys.maxsize:
+    print(-1)
+else:
+    print(min_val)
+
