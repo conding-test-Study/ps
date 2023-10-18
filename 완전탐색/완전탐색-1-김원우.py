@@ -1,4 +1,4 @@
-# 반례 아직 해결못함.
+# 반례 해결 완료
 import sys
 input = sys.stdin.readline
 
@@ -24,10 +24,9 @@ def dfs(curlen, price, buy):
             idx = name.index(targetStr[curlen])
             curPrice = int(books[k][0])
             tmpCh = name[idx]
-            ## 이 부분 수정필요
-            books[k][1].replace(tmpCh, ' ') # 같은 알파벳있으면 중복되는 문제 발생, 해결필요함
-            print(books[k][1], tmpCh)
-            ##
+            tmpList = list(name)
+            tmpList[idx] = '-'
+            books[k][1] = ''.join(tmpList)
 
             check = False
             if k in buy:
@@ -36,7 +35,10 @@ def dfs(curlen, price, buy):
             buy.add(k)
 
             dfs(curlen+1, price+curPrice, buy)
-            books[k][1].replace(' ', tmpCh)
+            tmpList = list(books[k][1])
+            tmpList[idx] = tmpCh
+            books[k][1] = ''.join(tmpList)
+
             if not check:
                 buy.remove(k)
 
