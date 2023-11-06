@@ -7,7 +7,7 @@
 |3✓|[시뮬레이션 & 구현](https://github.com/conding-test-Study/ps/blob/main/workbook/시뮬레이션&구현.md)|
 |4✓|[그래프탐색](https://github.com/conding-test-Study/ps/blob/main/workbook/그래프탐색.md)|
 |5✓|[완전탐색](https://github.com/conding-test-Study/ps/blob/main/workbook/완전탐색.md)|
-|6|[DP](https://github.com/conding-test-Study/ps/blob/main/workbook/DP.md)|
+|6✓|[DP](https://github.com/conding-test-Study/ps/blob/main/workbook/DP.md)|
 |7|[이분탐색 & 투포인터](https://github.com/conding-test-Study/ps/blob/main/workbook/이분탐색&투포인터.md)|
 |8|[최단경로 알고리즘](https://github.com/conding-test-Study/ps/blob/main/workbook/최단경로.md)|
 |9|[정렬](https://github.com/conding-test-Study/ps/blob/main/workbook/정렬.md)|
