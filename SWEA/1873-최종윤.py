@@ -1,4 +1,5 @@
-#테스트케이스 98개 중 93개 맞았다는데 어디서 틀린건지 모르겠다.
+#테스트케이스 98개 중 93개 맞았다는데 답지보고 수정하다가 39, 40 라인을 33라인으로 위치 바꾸니까 맞았다.
+#기존 코드는 벽일떄는 머리가 바뀌었지만  범위 밖으로 나갈 때는 머리를 바꾸지 못했다... 순서가 어디갈지 여기저기 대보고 맞는거를...
 
 T = int(input())
 for tc in range(1, T + 1):
@@ -30,13 +31,14 @@ for tc in range(1, T + 1):
                 nc = c + dc[i]
                 d = [dr[i], dc[i]]
                 car = shape[i]
+                #arr[r][c] = car
                 if 0 <= nr < H and 0 <= nc < W:
                     if arr[nr][nc] == '.':
                         arr[nr][nc] = car
                         arr[r][c] = '.'
                         r, c = nr, nc
-                    else:
-                        arr[r][c] = car
+                    #else:
+                    #    arr[r][c] = car
                     
 
         if com == 'S':
